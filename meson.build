@@ -13,7 +13,11 @@ project(
 
 config = configuration_data()
 config.set(
-    'PROJECT_ROOT',
+    'PROJECT_BUILD_ROOT',
+    meson.global_build_root()
+)
+config.set(
+    'PROJECT_SOURCE_ROOT',
     meson.global_source_root()
 )
 config.set(
