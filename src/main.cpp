@@ -23,8 +23,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  * @endparblock
  */
-#include <cstdlib>
+#include "graphics/window.hpp"
 
 int main(int argc, char** argv) {
+    Starlight::Graphics::Window window("Starlight", 1280, 720, true);
     return EXIT_SUCCESS;
 }
