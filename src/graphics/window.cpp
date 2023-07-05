@@ -49,7 +49,7 @@ struct Window::Impl {
             throw std::runtime_error(description);
         }
         glfwSetWindowUserPointer(window, this);
-        glfwSetWindowSizeCallback(window, [](GLFWwindow* window, int width, int height) {
+        glfwSetFramebufferSizeCallback(window, [](GLFWwindow* window, int width, int height) {
             auto self = static_cast<Impl*>(glfwGetWindowUserPointer(window));
             if (self && self->resize) self->resize(width, height);
         });
