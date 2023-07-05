@@ -1,5 +1,5 @@
 # Starlight
-Starlight is a galaxy simulator designed for visual enjoyment.
+Starlight is a galaxy simulator designed for visual pleasure.
 
 ## Build instructions
 ### Requirements
