@@ -37,10 +37,12 @@ configure_file(
 
 executable(
     'starlight',
+    'src/core/device.cpp',
     'src/core/window.cpp',
     'src/main.cpp',
     dependencies: [
-        dependency('glfw3')
+        dependency('glfw3'),
+        dependency('vulkan')
     ],
     gui_app: true
 )
