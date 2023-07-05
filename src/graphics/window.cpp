@@ -70,4 +70,16 @@ void Window::SetResizeCallback(const ResizeCallback& resize) {
     pImpl->resize = resize;
 }
 
+bool Window::ShouldClose(void) {
+    return glfwWindowShouldClose(pImpl->window);
+}
+
+void Window::CancelClose(void) {
+    glfwSetWindowShouldClose(pImpl->window, GLFW_FALSE);
+}
+
+void Window::PollEvents(void) {
+    glfwPollEvents();
+}
+
 } // namespace Starlight::Graphics

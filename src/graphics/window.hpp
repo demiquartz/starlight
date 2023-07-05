@@ -90,12 +90,38 @@ public:
     /**
      * @brief Set the resize callback function.
      *
-     * This function sets the callback function to be called when the window is resized.
+     * This method sets the callback function to be called when the window is resized.
      * The provided `resize` function will be invoked with the new width and height as parameters.
      *
      * @param resize The resize callback function.
      */
     void SetResizeCallback(const ResizeCallback& resize);
+
+    /**
+     * @brief Check if the window should be closed.
+     *
+     * This method checks if the window should be closed.
+     * It returns true if the window should be closed, false otherwise.
+     *
+     * @return true if the window should be closed, false otherwise.
+     */
+    bool ShouldClose(void);
+
+    /**
+     * @brief Cancel the window close request.
+     *
+     * This method cancels the window close request.
+     * After calling this method, `ShouldClose` method will return false until a new close request is received.
+     */
+    void CancelClose(void);
+
+    /**
+     * @brief Poll for window events.
+     *
+     * This method polls for window events.
+     * All window events that are received are processed immediately.
+     */
+    void PollEvents(void);
 
 private:
     struct Impl;
