@@ -82,4 +82,20 @@ void Window::PollEvents(void) {
     glfwPollEvents();
 }
 
+void Window::ShowCursor(void) {
+    glfwSetInputMode(pImpl->window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+}
+
+void Window::HideCursor(void) {
+    glfwSetInputMode(pImpl->window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+}
+
+void Window::ShowWindow(void) {
+    glfwShowWindow(pImpl->window);
+}
+
+void Window::HideWindow(void) {
+    glfwHideWindow(pImpl->window);
+}
+
 } // namespace Starlight::Graphics

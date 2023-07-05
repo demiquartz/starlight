@@ -123,6 +123,34 @@ public:
      */
     void PollEvents(void);
 
+    /**
+     * @brief Show the cursor.
+     *
+     * This method makes the cursor visible.
+     */
+    void ShowCursor(void);
+
+    /**
+     * @brief Hide the cursor.
+     *
+     * This method makes the cursor invisible.
+     */
+    void HideCursor(void);
+
+    /**
+     * @brief Show the window.
+     *
+     * This method makes the window visible.
+     */
+    void ShowWindow(void);
+
+    /**
+     * @brief Hide the window.
+     *
+     * This method makes the window invisible.
+     */
+    void HideWindow(void);
+
 private:
     struct Impl;
     std::unique_ptr<Impl> pImpl;
