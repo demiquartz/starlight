@@ -23,19 +23,19 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  * @endparblock
  */
-#ifndef STARLIGHT_GRAPHICS_WINDOW_HPP
-#define STARLIGHT_GRAPHICS_WINDOW_HPP
+#ifndef STARLIGHT_CORE_WINDOW_HPP
+#define STARLIGHT_CORE_WINDOW_HPP
 
 #include <functional>
 #include <memory>
 #include <string>
 
-namespace Starlight::Graphics {
+namespace Starlight::Core {
 
 /**
  * @brief Create and manage a window.
  *
- * This class provides functionality to create and manage a window for graphics rendering.
+ * This class provides functionality to create and manage a window.
  * It encapsulates the platform-specific window creation and management logic.
  *
  * Usage:
@@ -156,6 +156,6 @@ private:
     std::unique_ptr<Impl> pImpl;
 };
 
-} // namespace Starlight::Graphics
+} // namespace Starlight::Core
 
-#endif // STARLIGHT_GRAPHICS_WINDOW_HPP
+#endif // STARLIGHT_CORE_WINDOW_HPP

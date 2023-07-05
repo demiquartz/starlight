@@ -37,7 +37,7 @@ configure_file(
 
 executable(
     'starlight',
-    'src/graphics/window.cpp',
+    'src/core/window.cpp',
     'src/main.cpp',
     dependencies: [
         dependency('glfw3')

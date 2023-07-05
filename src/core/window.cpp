@@ -27,7 +27,7 @@
 #include <GLFW/glfw3.h>
 #include "window.hpp"
 
-namespace Starlight::Graphics {
+namespace Starlight::Core {
 
 static std::once_flag initialized;
 
@@ -98,4 +98,4 @@ void Window::HideWindow(void) {
     glfwHideWindow(pImpl->window);
 }
 
-} // namespace Starlight::Graphics
+} // namespace Starlight::Core

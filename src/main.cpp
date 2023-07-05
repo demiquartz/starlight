@@ -24,10 +24,10 @@
  * @endparblock
  */
 #include <thread>
-#include "graphics/window.hpp"
+#include "core/window.hpp"
 
 int main(int argc, char** argv) {
-    Starlight::Graphics::Window window("Starlight", 1280, 720, true);
+    Starlight::Core::Window window("Starlight", 1280, 720, true);
     while (!window.ShouldClose()) {
         using namespace std::chrono_literals;
         std::this_thread::sleep_for(10ms);
