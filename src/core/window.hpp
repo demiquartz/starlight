@@ -43,7 +43,7 @@ namespace Starlight::Core {
  * - The destructor will automatically clean up the window resources when the object is destroyed.
  *
  * Example:
- * @code
+ * @code{.cpp}
  * Window window("My Window", 1280, 720, true);
  * // Use the window...
  * @endcode
@@ -155,6 +155,70 @@ private:
     struct Impl;
     std::unique_ptr<Impl> pImpl;
 };
+
+/**
+ * @brief Shared pointer to a Window object.
+ *
+ * This type definition is for a shared pointer to a Window object. 
+ * It is used when the ownership of a Window object needs to be shared.
+ */
+using SharedWindow = std::shared_ptr<Window>;
+
+/**
+ * @brief Unique pointer to a Window object.
+ *
+ * This type definition is for a unique pointer to a Window object. 
+ * It is used when the ownership of a Window object needs to be unique.
+ */
+using UniqueWindow = std::unique_ptr<Window>;
+
+/**
+ * @brief Creates a shared pointer to a new Window object.
+ *
+ * This function creates a new Window object with the specified title, width, and height, and returns a shared pointer to it.
+ * The `visible` parameter determines whether the window should be initially visible or not.
+ * If the window fails to create, a `std::runtime_error` exception is thrown.
+ *
+ * Example:
+ * @code{.cpp}
+ * auto window = CreateSharedWindow("My Window", 1280, 720, true);
+ * // Use the window...
+ * @endcode
+ *
+ * @param title   The title of the window.
+ * @param width   The width of the window.
+ * @param height  The height of the window.
+ * @param visible Whether the window should be initially visible or not.
+ *
+ * @return A shared pointer to the newly created Window object.
+ *
+ * @throw std::runtime_error If the window fails to create.
+ */
+SharedWindow CreateSharedWindow(const std::string& title, std::size_t width, std::size_t height, bool visible);
+
+/**
+ * @brief Creates a unique pointer to a new Window object.
+ *
+ * This function creates a new Window object with the specified title, width, and height, and returns a unique pointer to it.
+ * The `visible` parameter determines whether the window should be initially visible or not.
+ * If the window fails to create, a `std::runtime_error` exception is thrown.
+ *
+ * Example:
+ * @code{.cpp}
+ * auto window = CreateUniqueWindow("My Window", 1280, 720, true);
+ * // Use the window...
+ * @endcode
+ *
+ * @param title   The title of the window.
+ * @param width   The width of the window.
+ * @param height  The height of the window.
+ * @param visible Whether the window should be initially visible or not.
+ *
+ * @return A unique pointer to the newly created Window object.
+ *
+ * @throw std::runtime_error If the window fails to create.
+ */
+UniqueWindow CreateUniqueWindow(const std::string& title, std::size_t width, std::size_t height, bool visible);
 
 } // namespace Starlight::Core
 

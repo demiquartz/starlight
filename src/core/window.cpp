@@ -98,4 +98,12 @@ void Window::HideWindow(void) {
     glfwHideWindow(pImpl->window);
 }
 
+SharedWindow CreateSharedWindow(const std::string& title, std::size_t width, std::size_t height, bool visible) {
+    return std::make_shared<Window>(title, width, height, visible);
+}
+
+UniqueWindow CreateUniqueWindow(const std::string& title, std::size_t width, std::size_t height, bool visible) {
+    return std::make_unique<Window>(title, width, height, visible);
+}
+
 } // namespace Starlight::Core
