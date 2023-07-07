@@ -44,7 +44,7 @@ namespace Starlight::Core {
  *
  * Example:
  * @code{.cpp}
- * Window window("My Window", 1280, 720, true);
+ * Starlight::Core::Window window("My Window", 1280, 720, true);
  * // Use the window...
  * @endcode
  */
@@ -181,7 +181,7 @@ using UniqueWindow = std::unique_ptr<Window>;
  *
  * Example:
  * @code{.cpp}
- * auto window = CreateSharedWindow("My Window", 1280, 720, true);
+ * auto window = Starlight::Core::CreateSharedWindow("My Window", 1280, 720, true);
  * // Use the window...
  * @endcode
  *
@@ -205,7 +205,7 @@ SharedWindow CreateSharedWindow(const std::string& title, std::size_t width, std
  *
  * Example:
  * @code{.cpp}
- * auto window = CreateUniqueWindow("My Window", 1280, 720, true);
+ * auto window = Starlight::Core::CreateUniqueWindow("My Window", 1280, 720, true);
  * // Use the window...
  * @endcode
  *
