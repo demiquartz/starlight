@@ -45,7 +45,10 @@ namespace Starlight::Core {
  * Example:
  * @code{.cpp}
  * Starlight::Core::Window window("My Window", 1280, 720, true);
- * // Use the window...
+ * while (!window.ShouldClose()) {
+ *     // Render graphics, handle input, or perform other operations...
+ *     window.PollEvents();
+ * }
  * @endcode
  */
 class Window final {
@@ -182,7 +185,10 @@ using UniqueWindow = std::unique_ptr<Window>;
  * Example:
  * @code{.cpp}
  * auto window = Starlight::Core::CreateSharedWindow("My Window", 1280, 720, true);
- * // Use the window...
+ * while (!window->ShouldClose()) {
+ *     // Render graphics, handle input, or perform other operations...
+ *     window->PollEvents();
+ * }
  * @endcode
  *
  * @param title   The title of the window.
@@ -206,7 +212,10 @@ SharedWindow CreateSharedWindow(const std::string& title, std::size_t width, std
  * Example:
  * @code{.cpp}
  * auto window = Starlight::Core::CreateUniqueWindow("My Window", 1280, 720, true);
- * // Use the window...
+ * while (!window->ShouldClose()) {
+ *     // Render graphics, handle input, or perform other operations...
+ *     window->PollEvents();
+ * }
  * @endcode
  *
  * @param title   The title of the window.
