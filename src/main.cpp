@@ -27,11 +27,11 @@
 #include "core/window.hpp"
 
 int main(int argc, char** argv) {
-    Starlight::Core::Window window("Starlight", 1280, 720, true);
-    while (!window.ShouldClose()) {
+    auto window = Starlight::Core::CreateSharedWindow("Starlight", 1280, 720, true);
+    while (!window->ShouldClose()) {
         using namespace std::chrono_literals;
         std::this_thread::sleep_for(10ms);
-        window.PollEvents();
+        window->PollEvents();
     }
     return EXIT_SUCCESS;
 }
