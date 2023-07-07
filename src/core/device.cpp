@@ -30,7 +30,10 @@ namespace Starlight::Core {
 struct Device::Impl {
 };
 
-Device::Device() {
+Device::Device() : Device(nullptr) {
+}
+
+Device::Device(SharedWindow window) {
 }
 
 Device::~Device() {
