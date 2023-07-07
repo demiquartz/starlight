@@ -42,7 +42,7 @@ namespace Starlight::Core {
  *
  * Example:
  * @code
- * Device device;
+ * Starlight::Core::Device device;
  * // Use the device...
  * @endcode
  */
