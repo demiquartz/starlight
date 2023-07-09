@@ -11,6 +11,10 @@ project(
     version: '0.0.0'
 )
 
+if get_option('buildtype').startswith('debug')
+    add_project_arguments('-DDEBUG', language : ['c', 'cpp'])
+endif
+
 config = configuration_data()
 config.set(
     'PROJECT_BUILD_ROOT',
