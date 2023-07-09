@@ -38,7 +38,7 @@ namespace Starlight::Core::Config {
  * The major and minor version numbers are 10-bit values, allowing for a range of 0 to 1023.
  * The patch version number is a 12-bit value, allowing for a range of 0 to 4095.
  */
-struct AppInfo {
+struct AppInfo final {
     std::string name;       ///< The name of the application.
     std::size_t major : 10; ///< The major version number of the application.
     std::size_t minor : 10; ///< The minor version number of the application.
