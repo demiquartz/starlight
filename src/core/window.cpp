@@ -66,6 +66,10 @@ pImpl(std::make_unique<Impl>(title, width, height, visible)) {
 Window::~Window() {
 }
 
+std::any Window::GetHandle(void) {
+    return pImpl->window;
+}
+
 void Window::SetResizeCallback(const ResizeCallback& resize) {
     pImpl->resize = resize;
 }

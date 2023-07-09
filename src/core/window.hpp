@@ -26,6 +26,7 @@
 #ifndef STARLIGHT_CORE_WINDOW_HPP
 #define STARLIGHT_CORE_WINDOW_HPP
 
+#include <any>
 #include <functional>
 #include <memory>
 #include <string>
@@ -89,6 +90,18 @@ public:
      * @brief Destruct the Window object.
      */
     ~Window();
+
+    /**
+     * @brief Get the platform-specific window handle.
+     *
+     * This method returns a handle to the underlying platform-specific window object.
+     * The handle is returned as a `std::any` object, which can hold any type of value.
+     * The actual type of the handle depends on the platform.
+     * You can use `std::any_cast` to cast the handle to the appropriate type.
+     *
+     * @return A `std::any` object holding the window handle.
+     */
+    std::any GetHandle(void);
 
     /**
      * @brief Set the resize callback function.
