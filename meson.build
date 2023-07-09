@@ -37,6 +37,7 @@ configure_file(
 
 executable(
     'starlight',
+    'src/core/config.cpp',
     'src/core/device.cpp',
     'src/core/window.cpp',
     'src/main.cpp',
