@@ -87,6 +87,9 @@ public:
      */
     ~Device();
 
+    // Debug implementation
+    void Clear(float r, float g, float b);
+
     // Add your methods and properties here...
 
 private:
