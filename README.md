@@ -21,7 +21,7 @@ Select the warn level. For details, refer to meson warn levels.
 1. RunTest(default: false)  
 Run unit tests post build if RunTest is true.
 1. Doxygen(default: false)  
-`document/html/index.html` will be generated if Doxygen is true and doxygen is installed.
+`doc/html/index.html` will be generated if Doxygen is true and doxygen is installed.
 
 ### Clean all
 To clean all, run the following command in the root directory of this project.
