@@ -3,8 +3,8 @@ project(
     default_options: [
         'buildtype=release',
         'warning_level=3',
-        'c_std=c17',
-        'cpp_std=c++20'
+        'c_std=c23',
+        'cpp_std=c++23'
     ],
     license: 'AGPL-3.0',
     license_files: 'LICENSE',
