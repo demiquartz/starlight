@@ -26,6 +26,7 @@
 #ifndef STARLIGHT_CORE_CONFIG_HPP
 #define STARLIGHT_CORE_CONFIG_HPP
 
+#include <cstdint>
 #include <string>
 
 namespace Starlight::Core::Config {
@@ -39,10 +40,10 @@ namespace Starlight::Core::Config {
  * The patch version number is a 12-bit value, allowing for a range of 0 to 4095.
  */
 struct AppInfo final {
-    std::string name;       ///< The name of the application.
-    std::size_t major : 10; ///< The major version number of the application.
-    std::size_t minor : 10; ///< The minor version number of the application.
-    std::size_t patch : 12; ///< The patch version number of the application.
+    std::string   name;       ///< The name of the application.
+    std::uint32_t major : 10; ///< The major version number of the application.
+    std::uint32_t minor : 10; ///< The minor version number of the application.
+    std::uint32_t patch : 12; ///< The patch version number of the application.
 };
 
 /**
