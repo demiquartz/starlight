@@ -23,6 +23,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  * @endparblock
  */
+#include <mutex>
 #include <shared_mutex>
 #include "config.hpp"
 #include "version.hpp"
