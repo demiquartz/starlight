@@ -13,6 +13,9 @@ project(
 
 if get_option('buildtype').startswith('debug')
     add_project_arguments('-DDEBUG', language : ['c', 'cpp'])
+    gui_app = false
+else
+    gui_app = true
 endif
 
 config = configuration_data()
@@ -49,5 +52,5 @@ executable(
         dependency('glfw3'),
         dependency('vulkan')
     ],
-    gui_app: true
+    gui_app: gui_app
 )
